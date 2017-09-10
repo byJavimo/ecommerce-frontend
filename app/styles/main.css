@@ -1,0 +1,96 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  margin: 0px 10px;
+  text-decoration: none;
+}
+
+.row {
+  padding-top: 2%;
+}
+
+/*##################*/
+/*Main Page Styles*/
+/*#################*/
+.slider-image {
+  height: 100vh;
+}
+
+
+.main-image button {
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  right: 45%;
+  padding: 10px 20px;
+}
+
+/* Featured products section */
+
+.featured-products {
+  display: inline-flex;
+}
+
+.featured-products img {
+  height: 80%;
+}
+
+.featured-products div {
+  margin: auto;
+}
+
+a .carousel-control-next {
+  color: green;
+}
+
+/* Shop now section */
+
+.shop-now{
+  background: url("http://1.bp.blogspot.com/-tDi8quvB-Gk/VXBd4jv9UXI/AAAAAAAAAXU/8wD4uaWaXNg/s640/ice-extended.jpg") no-repeat center center;
+  background-size: cover;
+  display: inline-flex;
+  height: 600px;
+}
+
+/* User opinions section*/
+
+.user-opinions .card {
+  margin:2%;
+}
+
+.user-opinions img {
+  padding: 2% 20%;
+  width: 100%;
+  height: 30%;
+}
+
+/* Responsive: Portrait tablets and up */
+/*@media screen and (min-width: 768px) {*/
+  /*.container {*/
+    /*max-width: 730px;*/
+  /*}*/
+
+  /*!* Remove the padding we set earlier *!*/
+  /*.header,*/
+  /*.marketing,*/
+  /*.footer {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  /*}*/
+  /*!* Space out the masthead *!*/
+  /*.header {*/
+    /*margin-bottom: 30px;*/
+  /*}*/
+  /*!* Remove the bottom border on the jumbotron for visual effect *!*/
+  /*.jumbotron {*/
+    /*border-bottom: 0;*/
+  /*}*/
+

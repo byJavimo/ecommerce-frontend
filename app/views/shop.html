@@ -1,0 +1,42 @@
+<div ng-repeat="product in shop.products">
+  <h2> {{product.name}}</h2>
+  <div>
+    <img src="{{product.picture}}">
+    <ul>
+      <li> Price: {{product.price}}</li>
+      <li> Description: {{product.description}}</li>
+    </ul>
+  </div>
+  <button ng-click="shop.deleteProduct(product._id)"> Delete product</button>
+  <button  ng-if="!shop.updateFormIsShown" ng-click="shop.showUpdateForm()"> Update product </button>
+  <div ng-if="shop.updateFormIsShown">
+    <form name="updateProductForm" ng-submit="updateProductForm.$valid && shop.updateProduct(product)">
+      <label> Product name: </label>
+      <input ng-model="product.name">
+      <label> Product image: </label>
+      <input ng-model="product.image">
+      <label> Product price: </label>
+      <input ng-model="product.price">
+      <label> Product description:</label>
+      <textarea ng-model="product.description"></textarea>
+      <input type="submit">
+    </form>
+  </div>
+</div>
+
+
+<form name="productForm" ng-submit="productForm.$valid && shop.addProduct(shop.product)">
+  <label> Product name: </label>
+  <input ng-model="shop.product.name">
+  <label> Product image: </label>
+  <input ng-model="shop.product.picture">
+  <label> Product price: </label>
+  <input ng-model="shop.product.price">
+  <label> Product description:</label>
+  <textarea ng-model="shop.product.description"></textarea>
+  <label> Add product to featured products</label>
+  <input type="checkbox" ng-model="shop.product.isFeatured">
+  <input type="submit">
+</form>
+
+
