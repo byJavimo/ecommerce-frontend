@@ -12,9 +12,38 @@ angular.module('ecommerceShopApp')
 
     var vm = this;
 
+    // Featured products section
+
     vm.featuredProducts = [];
 
-    this.opinions = [
+    vm.numberOfBreakLines = [];
+
+    var getFeaturedProducts = function (){
+      productsService.getFeaturedProducts().then(function (response) {
+        vm.featuredProducts = response;
+      });
+    };
+
+    vm.getNumberOfBreakLines = function(productDescription) {
+      var firstWhiteSpace = /^ /;
+      var lastWhiteSpace = / $/;
+      var severalWhiteSapace = /[ ]+/g;
+      vm.numberOfWords = productDescription.split(" ").length;
+      productDescription = productDescription.replace (severalWhiteSapace," ");
+      productDescription = productDescription.replace (firstWhiteSpace,"");
+      productDescription = productDescription.replace (lastWhiteSpace,"")
+
+      return  vm.numberOfWords = productDescription.split(" ").length;
+
+      if(vm.numberOfWords >=20) {
+        vm.wordToConcatenate = vm.numberOfWords[19] + '...';
+      }
+      return vm.wordToConcatenate;
+
+    };
+
+    // User opinions section
+    vm.opinions = [
       {
         user: "John Snow",
         userImage:"https://cde.laprensa.e3.pe/ima/0/0/1/3/9/139647.jpg",
@@ -38,11 +67,6 @@ angular.module('ecommerceShopApp')
       }
     ];
 
-    var getFeaturedProducts = function (){
-      productsService.getFeaturedProducts().then(function (response) {
-        vm.featuredProducts = response;
-      });
-    };
-
+    // On init:
     getFeaturedProducts();
   }]);

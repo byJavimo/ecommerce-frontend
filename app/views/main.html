@@ -1,5 +1,5 @@
 <!--Main carousel section-->
-<div id="introductionCarouselControls"class="row carousel slide" data-ride="carousel">
+<section id="introductionCarouselControls"class="row carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100 slider-image" src="http://www.perusmart.com/wp-content/uploads/Jon-Snow-vs-White-Walker.jpg" alt="First slide">
@@ -19,11 +19,11 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</section>
 <!--Main carousel section:end-->
 
 <!-- Featured products section -->
-<div id="featuredProductsCarousel"class="carousel" data-ride="carousel">
+<section id="featuredProductsCarousel" class="carousel" data-ride="carousel" data-interval="2500">
   <div class="carousel-inner">
     <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="featuredProduct in main.featuredProducts">
       <featured-product product="featuredProduct"></featured-product>
@@ -37,13 +37,19 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</section>
 <!-- Featured products section:end -->
+<!-- Shop now section-->
+<section class="shop-now">
+  <button> Shop now</button>
+</section>
+
+<!-- Shop now section:end-->
 
 <!--User opinions section-->
-<div class="row user-opinions">
+<section class="row user-opinions">
   <div class="card col" ng-repeat="opinion in main.opinions"style="width: 20rem;">
     <user-opinion opinion="opinion"></user-opinion>
   </div>
-</div>
+</section>
 <!--User opinions section:end-->

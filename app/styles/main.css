@@ -12,6 +12,10 @@ ul li a {
   text-decoration: none;
 }
 
+section {
+  margin: 2%;
+}
+
 .row {
   padding-top: 2%;
 }
@@ -35,16 +39,37 @@ ul li a {
 
 /* Featured products section */
 
+#featuredProductsCarousel .carousel-item {
+  border: rgba(0,0,0,.125) 1px solid;
+}
+
+#featuredProductsCarousel a span {
+  color: green;
+}
+
 .featured-products {
   display: inline-flex;
 }
 
-.featured-products img {
-  height: 80%;
+.ellipsis {
+  height: 100px;
+  overflow: hidden;
+  text-after-overflow: ellipsis;
 }
 
-.featured-products div {
-  margin: auto;
+.featured-products img {
+  margin-bottom: 2%;
+  border-right: rgba(0,0,0,.125) 1px solid;
+  height: 200px;
+  width: 200px;
+}
+
+ /*Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+  .featured-products img {
+    height: 75px;
+    width: 75px;
+  }
 }
 
 a .carousel-control-next {
@@ -53,11 +78,11 @@ a .carousel-control-next {
 
 /* Shop now section */
 
-.shop-now{
-  background: url("http://1.bp.blogspot.com/-tDi8quvB-Gk/VXBd4jv9UXI/AAAAAAAAAXU/8wD4uaWaXNg/s640/ice-extended.jpg") no-repeat center center;
+.shop-now {
+  background: url("http://static1.businessinsider.com/image/57767458dd0895ec6c8b4c6f-1200/do-dragons-get-tired.jpg") center center;
   background-size: cover;
   display: inline-flex;
-  height: 600px;
+  height: 300px;
 }
 
 /* User opinions section*/
